@@ -1,0 +1,56 @@
+DELETE http://127.0.0.1:8000/api/auth/users/
+Content-Type: application/json
+
+{
+    "id": 2
+}
+
+###
+
+GET http://127.0.0.1:8000/api/auth/users/
+
+###
+
+PATCH http://127.0.0.1:8000/api/auth/users/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "old_password": "Glenda",
+    "password": "glenda",
+    "password_confirmation": "glenda"
+}
+###
+
+PATCH http://127.0.0.1:8000/api/students/3/
+Content-Type: application/json
+
+{
+    "schoolYear": 2023,
+    "firstName": "Lhourde Ian",
+    "middleName": "Ros",
+    "lastName": "Sube",
+    "grade": 12,
+    "gender": "Male",
+    "age": 20,
+    "address": {
+        "id": 3,
+        "province": "Some Province",
+        "municipality": "Some Municipality",
+        "zipCode": 12345,
+        "city": "Some City",
+        "barangay": "Some Barangay",
+        "streetAddress": "123 Main St"
+    },
+    "section": "DTS IT-1E2",
+    "status": "Enrolled"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/students
+Content-Type: application/json
+
+{
+    "id": 1
+}
